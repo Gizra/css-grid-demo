@@ -1,0 +1,106 @@
+.featured-resource {
+  
+  &.underneath {
+  
+    .resource-container {
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+      grid-template-rows: 500px auto;
+      margin-bottom: 30px;
+     
+     .item {
+       position: relative;
+       
+       
+        .featured-resource-title-banner {
+          position: absolute;
+          top: 40px;
+          width: 100%;
+          background-color: #c11da8;
+          margin-left: -10px;
+    
+          .featured-resource-title {
+            padding: 10px 20px 25px;
+            line-height: 1.2em;
+            color: white;
+            
+            .subtitle {
+              margin-bottom: 10px;
+              
+            }
+            a.subtitle-link {
+              color: #bed600;
+              text-decoration: underline;
+            }
+          }
+        }
+        
+        .teaser-hover {
+          position: absolute;
+          bottom: 10px;
+          
+          .teaser-hover-text {
+            padding: 3px 8px;
+            margin-top: 10px;
+            border: 2px solid white;
+            width: 95px;
+            text-transform: uppercase;
+            color: white;
+            font-size: 12px;
+          }
+        }
+      }
+      .item-1  {
+        grid-column: 1 / span 5;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
+      }
+     
+      .item-title {
+        display: none;
+        background-color: #312b28;
+        
+        h3 {
+          margin-left: 10px;
+          margin-right: 10px;
+          font-size: 16px;
+          border-bottom: 2px solid #fff;
+          
+        }
+      }
+
+      .item-2, .item-3, .item-4, .item-5, .item-6 {
+        border-right: 2px solid rgba(255, 255, 255, .3)
+      }
+      
+      .item-2, .item-3, .item-4, .item-5, .item-6  {
+        padding: 10px 20px 55px;
+        background-color: #312b28;
+
+        img {
+          display: none;
+        }
+        
+        .resource-title {
+          margin-bottom: 10px;
+          color: #bed600;
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 1.2;
+        }
+        
+        .resource-type-title {
+          padding: 5px 10px;
+          background-color: #c11da8;
+          color: white;
+          font-size: 12px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      }      
+    }
+  }
+}
