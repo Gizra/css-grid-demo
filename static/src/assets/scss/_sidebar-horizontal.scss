@@ -15,7 +15,7 @@
           position: absolute;
           top: 40px;
           width: 100%;
-          background-color: #c11da8;
+          background-color: $highlight-color;
           margin-left: -10px;
 
           .featured-resource-title {
@@ -28,7 +28,7 @@
 
             }
             a.subtitle-link {
-              color: #bed600;
+              color: $secondary-color;
               text-decoration: underline;
             }
           }
@@ -50,7 +50,7 @@
 
       .item-title {
         grid-column: 2 / span 1;
-        background-color: #312b28;
+        background-color: $background-color;
 
         h3 {
           color: white;
@@ -69,7 +69,7 @@
       .item-2, .item-3, .item-4, .item-5  {
         padding: 20px;
         grid-column: 2 / span 1;
-        background-color: #312b28;
+        background-color: $background-color;
 
         img {
           float: left;
@@ -79,7 +79,7 @@
 
         .resource-title {
           padding: 0 10px 10px;
-          color: #bed600;
+          color: $secondary-color;
           font-size: 14px;
           font-weight: bold;
           line-height: 1.2;
@@ -87,7 +87,7 @@
 
         .resource-type-title {
           padding: 5px 10px;
-          background-color: #c11da8;
+          background-color: $highlight-color;
           color: white;
           font-size: 12px;
           font-weight: bold;

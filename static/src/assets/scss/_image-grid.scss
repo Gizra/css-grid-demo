@@ -19,7 +19,7 @@
           position: absolute;
           top: 40px;
           width: 100%;
-          background-color: #c11da8;
+          background-color: $highlight-color;
           margin-left: -10px;
 
           .featured-resource-title {
@@ -32,7 +32,7 @@
 
             }
             a.subtitle-link {
-              color: #bed600;
+              color: $secondary-color;
               text-decoration: underline;
             }
           }
