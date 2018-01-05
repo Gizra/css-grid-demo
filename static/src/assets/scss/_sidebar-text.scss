@@ -48,11 +48,13 @@
         }
       }
       .item-1  {
-        display: grid;
         grid-row: 1 / span 6;
 
         img {
           width: 100%;
+          object-fit: cover;
+          display: block;
+          height: 100%;
         }
       }
 

@@ -1,100 +1,131 @@
-.featured-resource {
+.sidebar-horizontal .resource-container {
+  display: grid;
 
-  &.sidebar-horizontal {
+  @media (min-width: $small-screen) {
+    grid-template-columns: 50% 50%;
+  }
 
-    .resource-container {
-      display: grid;
-      grid-template-columns: 70% 30%;
-      grid-template-rows: 40px auto auto auto auto;
-      margin-bottom: 30px;
+  @media (min-width: $medium-screen) {
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 40px auto auto auto auto;
+  }
 
-     .item {
-       position: relative;
+  .item {
+    position: relative;
 
-        .featured-resource-title-banner {
-          position: absolute;
-          top: 40px;
-          width: 100%;
-          background-color: $highlight-color;
-          margin-left: -10px;
+    .featured-resource-title-banner {
+      background-color: $highlight-color;
+      margin-left: -10px;
+      position: absolute;
+      top: 40px;
+      width: 100%;
 
-          .featured-resource-title {
-            padding: 10px 20px 25px;
-            line-height: 1.2em;
-            color: white;
+      .featured-resource-title {
+        color: $white;
+        line-height: 1.2em;
+        padding: 10px 20px 25px;
 
-            .subtitle {
-              margin-bottom: 10px;
+        .subtitle {
+          margin-bottom: 10px;
 
-            }
-            a.subtitle-link {
-              color: $secondary-color;
-              text-decoration: underline;
-            }
-          }
         }
-
-        .teaser-hover {
-          display: none;
-        }
-      }
-      .item-1  {
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 5;
-        display: flex;
-
-        img {
-          width: 100%;
-        }
-      }
-
-      .item-title {
-        grid-column: 2 / span 1;
-        background-color: $background-color;
-
-        h3 {
-          color: white;
-          padding-top: 10px;
-          margin-left: 10px;
-          margin-right: 10px;
-          font-size: 16px;
-          border-bottom: 2px solid #fff;
-        }
-      }
-
-      .item-2, .item-3, .item-4 {
-        border-bottom: 2px solid rgba(255, 255, 255, .3)
-      }
-
-      .item-2, .item-3, .item-4, .item-5  {
-        padding: 20px;
-        grid-column: 2 / span 1;
-        background-color: $background-color;
-
-        img {
-          float: left;
-          width: 40%;
-          margin-right: 10px;
-        }
-
-        .resource-title {
-          padding: 0 10px 10px;
+        a.subtitle-link {
           color: $secondary-color;
-          font-size: 14px;
-          font-weight: bold;
-          line-height: 1.2;
-        }
-
-        .resource-type-title {
-          padding: 5px 10px;
-          background-color: $highlight-color;
-          color: white;
-          font-size: 12px;
-          font-weight: bold;
-          text-transform: uppercase;
+          text-decoration: underline;
         }
       }
-      .item-6 {display: none; }
     }
+
+    .teaser-hover {
+      display: none;
+    }
+  }
+
+  .item-1  {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+
+    @media (min-width: $small-screen) {
+      grid-column: 1 / span 2;
+    }
+    @media (min-width: $medium-screen) {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 5;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      height: 100%;
+    }
+  }
+
+  .item-title {
+    background-color: $background-color;
+    grid-row: 2 / span 1;
+
+    @media (min-width: $small-screen) {
+      grid-column: 1 / span 2;
+    }
+
+    @media (min-width: $medium-screen) {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    h3 {
+      border-bottom: 2px solid $white;
+      color: $white;
+      font-size: 16px;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-top: 10px;
+    }
+  }
+
+  .item-2,
+  .item-3,
+  .item-4 {
+    border-bottom: 2px solid rgba(255, 255, 255, .3);
+  }
+
+  .item-2,
+  .item-3,
+  .item-4,
+  .item-5 {
+    background-color: $background-color;
+    padding: 20px;
+
+    @media (min-width: 720px) {
+      grid-column: 2 / span 1;
+    }
+
+    img {
+      float: left;
+      margin-right: 10px;
+      width: 40%;
+    }
+
+    .resource-title {
+      color: $secondary-color;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1.2;
+      padding: 0 10px 10px;
+    }
+
+    .resource-type-title {
+      background-color: $highlight-color;
+      color: $white;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 5px 10px;
+      text-transform: uppercase;
+    }
+  }
+
+  .item-6 {
+    display: none;
   }
 }
