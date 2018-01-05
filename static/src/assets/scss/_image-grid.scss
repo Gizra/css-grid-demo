@@ -1,5 +1,5 @@
 .featured-resource {
-  
+
   &.image-grid {
 
     .resource-container {
@@ -7,11 +7,10 @@
       grid-template-columns: 25% 25% 25% 25%;
       grid-template-rows: 50% 50%;
       margin-bottom: 20px;
-    
+
       .item {
-        //overflow: hidden;
         position: relative;
-        
+
         img {
           width: 100%;
           height: auto;
@@ -22,15 +21,15 @@
           width: 100%;
           background-color: #c11da8;
           margin-left: -10px;
-    
+
           .featured-resource-title {
             padding: 10px 20px 25px;
             line-height: 1.2em;
             color: white;
-            
+
             .subtitle {
               margin-bottom: 10px;
-              
+
             }
             a.subtitle-link {
               color: #bed600;
@@ -38,13 +37,13 @@
             }
           }
         }
-    
+
         .resource-title-banner {
           position: absolute;
           bottom: 0;
           width: 100%;
           background-color: rgba(49, 43, 40, .8);
-    
+
           .resource-title {
             padding: 10px;
             padding-bottom: 10px;
@@ -53,11 +52,11 @@
             color: white;
           }
         }
-        
+
         .resource-type {
           display: none;
         }
-        
+
         .teaser-hover {
           position: absolute;
           top: 0;
@@ -65,12 +64,12 @@
           left: 0;
           right: 0;
           background: rgba(0, 0, 0, 0.2);
-          color: #fff;          
+          color: #fff;
           visibility: hidden;
           opacity: 0;
           z-index: 1;
           cursor: pointer;
-    
+
           .teaser-hover-text {
             width: 150px;
             margin-left: auto;
@@ -83,25 +82,26 @@
             font-weight: bold;
           }
         }
-    
-      }   
-    
+
+      }
+
       .item:hover .teaser-hover {
         visibility: visible;
         opacity: 1;
       }
-      
+
       .item-1 {
         grid-column: 1 / span 2;
         grid-row: 1 / span 2;
+        display: flex;
       }
-      
+
       .item-title, .item-6 {
         display: none;
       }
     }
   }
-  
+
   &.image-grid-gutter {
     .resource-container {
       grid-column-gap: 7px;
